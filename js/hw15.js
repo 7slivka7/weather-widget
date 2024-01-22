@@ -45,12 +45,7 @@ function getWeather(data) {
     return directions[index];
   }
 
-  function getArrowRotationStyle(degrees) {
-    return `transform: rotate(${degrees}deg);`;
-  }
-
   const windDirectionText = getWindDirection(windDirection);
-  const arrowRotationStyle = getArrowRotationStyle(windDirection);
 
   const template = `
     <div class="face front">
