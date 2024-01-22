@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cccbcb;
+}
+.main-container {
+  background-image: linear-gradient(to top, #23acc4, #b4e3f8);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 15px;
+  background-color: #4f4cfa;
+  color: #fff;
+  border: none;
+  border-radius: 70% 30%;
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  background-image: linear-gradient(to right, #59e459, #e8f768);
+}
+
+#weather {
+  margin-top: 10px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+
+#weather .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 2s ease-in-out;
+  transform: perspective(500px) rotateY(0deg);
+}
+#weather .face.front {
+  flex-direction: column;
+  background-image: linear-gradient(to top, #23acc4, #c9ec87);
+}
+
+#weather:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+#weather .face.back {
+  flex-direction: column;
+  background-image: linear-gradient(to top, #23acc4, #c9ec87);
+  transform: perspective(500px) rotateY(180deg);
+}
+
+#weather:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+.weather-city {
+  padding: 45px 0 10px;
+  font-size: 48px;
+}
+.weather-coordinates {
+  font-size: 14px;
+  color: #474747;
+  padding-bottom: 10px;
+}
+.weather-status {
+  font-size: 32px;
+}
+.weather-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.weather-temp {
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.weather-feel-like {
+  font-size: 16px;
+  color: #474747;
+  padding-bottom: 10px;
+}
+.weather-wind{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  font-size: 30px;
+  padding-top: 55px;
+}
